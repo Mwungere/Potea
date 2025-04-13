@@ -1,4 +1,5 @@
 import { icons } from '@/constants/icons';
+import useDelayedNavigation from '@/hooks/useDelayedNavigation';
 import { useRouter } from 'expo-router';
 import { useEffect } from 'react';
 import { Image, StyleSheet, Platform, View, Text, LogBox } from 'react-native';
@@ -16,16 +17,7 @@ export default function HomeScreen() {
     ]);
   }, []);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-
-      router.push('/welcome')
-
-      return () => clearTimeout(timer);
-    }, 1000)
-
-
-  },[router])
+  useDelayedNavigation('/welcome', 1000);
 
   return (
     <View className=' flex-1 flex flex-col justify-center items-center bg-dark-200'>
