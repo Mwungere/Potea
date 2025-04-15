@@ -44,7 +44,7 @@ export default function IntroSlider() {
       scrollViewRef.current.scrollTo({ x: width * nextIndex, animated: true });
       setCurrentIndex(nextIndex);
     } else {
-      router.push("/");
+      router.push("/login");
     }
   };
 
@@ -60,7 +60,7 @@ export default function IntroSlider() {
       {/* Skip Button */}
       <TouchableOpacity
         className="absolute top-12 right-6 z-10 px-4 py-2 bg-gray-100 rounded-full"
-        onPress={() => router.push("/")}
+        onPress={() => router.push("/login")}
       >
         <Text className="text-gray-800 font-medium">Skip</Text>
       </TouchableOpacity>

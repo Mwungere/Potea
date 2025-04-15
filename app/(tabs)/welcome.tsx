@@ -6,7 +6,7 @@ import useDelayedNavigation from "@/hooks/useDelayedNavigation";
 
 export default function welcome() {
 
-  useDelayedNavigation('/customSlider', 4000)
+  useDelayedNavigation('/customSlider', 1000)
   return (
     <View className="flex-1 flex justify-center items-center bg-dark-200">
       <ImageBackground
